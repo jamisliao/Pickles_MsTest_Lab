@@ -101,3 +101,12 @@ Scenario: 一般帳號帳號，購買一台筆記型電腦
 	And 使用者為 NormalUser
 	When 計算運費
 	Then 運費應為 200
+
+Scenario: 一般帳號帳號，購買一台筆記型電腦和一本家電
+	Given 購物車中有
+	| Name    | ProductType | ProductSize |
+	| NetBook | Laptop      | Medium      |
+	| TV      | Electronic  | Big         |
+	And 使用者為 NormalUser
+	When 計算運費
+	Then 運費應為 300
