@@ -404,7 +404,36 @@ this.ScenarioSetup(scenarioInfo);
 #line 94
  testRunner.When("計算運費", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 95
- testRunner.Then("運費應為 100", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("運費應為 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("一般帳號帳號，購買一台筆記型電腦")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "結帳運費試算驗證")]
+        public virtual void 一般帳號帳號購買一台筆記型電腦()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("一般帳號帳號，購買一台筆記型電腦", ((string[])(null)));
+#line 97
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Name",
+                        "ProductType",
+                        "ProductSize"});
+            table9.AddRow(new string[] {
+                        "NetBook",
+                        "Laptop",
+                        "Medium"});
+#line 98
+ testRunner.Given("購物車中有", ((string)(null)), table9, "Given ");
+#line 101
+ testRunner.And("使用者為 NormalUser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 102
+ testRunner.When("計算運費", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 103
+ testRunner.Then("運費應為 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

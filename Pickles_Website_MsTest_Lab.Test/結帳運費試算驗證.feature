@@ -92,4 +92,12 @@ Scenario: 一般帳號帳號，購買一台筆記型電腦和一本書籍
 	| C#      | Book        | Small       |
 	And 使用者為 NormalUser
 	When 計算運費
-	Then 運費應為 100
+	Then 運費應為 200
+
+Scenario: 一般帳號帳號，購買一台筆記型電腦
+	Given 購物車中有
+	| Name    | ProductType | ProductSize |
+	| NetBook | Laptop      | Medium      |
+	And 使用者為 NormalUser
+	When 計算運費
+	Then 運費應為 200
